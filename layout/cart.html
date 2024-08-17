@@ -1,0 +1,123 @@
+
+    <style>
+    .cot2 {font-size: 30px;}
+    .card-shop a{
+      font-size: 30px;
+      width: 50px;
+      height: 50px;
+    }
+
+    
+    .danhmuc a{
+     color: #683d0a;
+     font-weight: bold;
+    }
+    .img-thumbnail2{
+  width: 350px;
+  height: 400px;
+}
+.gh{
+  background-color: rgb(88, 97, 177);
+}
+    
+    </style>
+</head>
+<body>
+    
+<div class="container-xxl row">
+    <h1 class="text-center">Giỏ Hàng</h1>
+
+    
+ <div class="col-7" ng-if="cart.length>0">
+    <div class="card" ng-repeat="sp in cart">
+        <div class="card-header" >
+            <a href="sanpham.html" class="badge text-warning" style="font-size: 15px;">Thêm Sản Phẩm Giảm Giá</a>
+             <span ng-if="sp.ic == 'new'">
+              <p class="btn btn-danger rounded-5 position-relative top-0  fa-solid fa-shake">NEW</p>
+            </span>
+            <span ng-if="sp.ic == 'sale' ">
+              <p class="btn btn-warning rounded-5  position-relative top-0  fa-solid fa-bounce">SALE</p>
+            </span>
+            <span ng-if="sp.ic == 'limitted' ">
+        </div>
+        <div class="card-body row" >
+             <div class="col-4"><img class="img-thumbnail" src="{{sp.img}}" alt=""></div>
+             <div class="col-8">
+                <h4>{{sp.name}}</h4>
+                <p><span style="margin-right: 10px;">Color :</span><select name="" id="" ng-model="color" ng-options="x.color for x in sp.color" class="form-control"></select></p>
+                <p><span style="margin-right: 10px;">Size :</span><select name="" id="" ng-model="size" ng-options="x.size for x in sp.Size" class="form-control"></select></p>
+                <p class="btn btn-danger rounded-5 position-relative top-0   fa-beat">{{sp.xuatxu}}</p>
+
+  
+                 <div class="row accordion">
+                    <div class="col-6 "><span>Số lượng</span><input class="text-center" type="number" min="1" placeholder="{{sp.quantity}}" max="{{sp.tonkho}}" ng-model="sp.quantity"></div>
+                    <div class="col-6 text-end"><span>Giá :</span>{{sp.price | currency:"":0}}VNĐ</div>
+                    
+                 </div>
+                 <a class="btn btn-danger" ng-click="del(sp.id)"> Xoá</a>
+
+
+
+             </div>
+        </div>
+    </div>
+ </div>
+ <div class="col-5 " ng-if="cart.length  > 0">
+  <div class="card ">
+    <div class="card-body text-center">
+        <a href=""><i class="fa-regular fa-clipboard"></i>Thêm ghi chú đặt hàng</a>
+        <p><strong>Tổng Cộng :</strong><strong>{{tongTien() | currency:"":0}}VNĐ</strong></p>
+        <a   class="btn btn-info text-center w-100" ng-click="Thanhtoan()">Thủ Tục Thanh Toán</a>
+        <p class="text-center" style="color: rgb(107, 110, 110);">Thuế và phí vận chuyển</p>
+    </div>
+    <a colspan="2" class="btn btn-info" ng-click="xoahet()">Xoá Hết</a>
+
+  </div>
+   <a href="#!sanpham">Tìm Thêm Sản Phẩm Mới <i class="fa-solid fa-arrow-right"></i></a>
+ </div>
+</div>
+
+
+
+<div class="row" ng-if ="cart.length > 0">
+    <P class="text-center mt-5" style="font-size: 30px;background-color: #4a0202; color: white;">Sản Phẩm Liên Quan</P>
+    <div class="card col-sm-4  bg-custom-sp" ng-repeat="sp in dsSP | search:keywork:['name','price','xuatxu','ic'] | orderBy:order | limitTo:3:12 " style="max-height: 710px;">
+      <div class="card-header text-center">
+        <h6>{{sp.name}}</h6>
+      </div>
+      <div class="card-body"><img class="img-thumbnail img-thumbnail2" src="{{sp.img}}" alt="">
+      </div>
+      <div class="card-footer text-center">
+        <span ng-if="sp.tonKho > 1"><p class="badge  text-bg-info">Còn Hàng</p>
+        </span>
+        <span ng-if="sp.tonKho < 1"><p class="badge  text-bg-info">Hết Hàng</p>
+        </span>
+        <span ng-if="sp.ic == 'new'">
+          <p class="btn btn-danger rounded-5 position-relative top-0  fa-solid fa-shake">NEW</p>
+        </span>
+        <span ng-if="sp.ic == 'sale' ">
+          <p class="btn btn-warning rounded-5  position-relative top-0  fa-solid fa-bounce">SALE</p>
+        </span>
+        <span ng-if="sp.ic == 'limitted' ">
+          <p class="btn btn-warning rounded-5  position-relative top-0  fa-solid fa-bounce"><i class="fa-solid fa-star"></i></p>
+        </span>
+
+        <span>{{sp.price | currency:"":0}}VNĐ</span>
+      </div>
+
+      <div class="btn-group ">
+        <a ng-click="mua(sp)" type="button" class="btn btn-danger me-2 rounded-2" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+          Mua Ngay
+        </a>
+        <a href="#!chitietSP/{{sp.id}}"   class="btn btn-success me-2 rounded-2" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+          Xem Chi Tiết
+        </a>    
+      </div>
+      
+    </div>
+
+
+   </div>
+    
+<div class="text-center mt-5 mb-5 fa-beat"   ng-if ="cart.length == 0 " style="font-size: 20px; color: rgb(229, 243, 123);">Bạn Chưa Có Sản Phẩm Nào Trong Giỏ Hàng <i class="fa-regular fa-face-sad-tear"></i></div>
+</body>

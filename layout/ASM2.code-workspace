@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../demo1/slide6.2"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ASM2"
+	}
+}

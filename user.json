@@ -1,0 +1,104 @@
+[
+    {
+        "idUser":0,
+        "name":"Nguyễn Vân Anh",
+        "sđt":"0900908889",
+        "email":"nghia@123",
+        "diachi":[
+            {"quocGia":"Việt Nam",
+            "thanhpho":"Hồ Chí Minh",
+            "quan":"Quận 12",
+            "phuong":"Tân Chánh Hiệp",
+            "nha":"08 TMT 2A"}
+
+        ],
+        "passwork":"nghia123",
+        "avt":"img/anh6.webp",
+        "rote":0,
+        "sale":[
+            "10",
+            "20",
+            "30",
+            "50",
+            "70"
+        ]
+        
+    },
+    {
+        "idUser":0,
+        "name":"Tomny Tèo",
+        "sđt":"0900908888",
+        "email":"nghia@321",
+        "diachi":[
+            {"quocGia":"Việt Nam",
+            "thanhpho":"Hồ Chí Minh",
+            "quan":"Quận 12",
+            "phuong":"Tân Chánh Hiệp",
+            "nha":"08 TMT 2A"}
+
+        ],
+        "passwork":"nghia123",
+        "avt":"img/anh6.webp",
+        "rote":1,
+        "sale":[
+            "10",
+            "20",
+            "30",
+            "50",
+            "70"
+        ]
+        
+    },
+    
+    {
+        "idUser":0,
+        "name":"Nguyễn Vân Anh",
+        "sđt":"0900908881",
+        "email":"nghia@1234",
+        "diachi":[
+            {"quocGia":"Việt Nam",
+            "thanhpho":"Hồ Chí Minh",
+            "quan":"Quận 12",
+            "phuong":"Tân Chánh Hiệp",
+            "nha":"08 TMT 2A"}
+
+        ],
+        "passwork":"nghia123",
+        "avt":"img/anh6.webp",
+        "rote":0,
+        "sale":[
+            "10",
+            "20",
+            "30",
+            "50",
+            "70"
+        ]
+        
+    },
+    {
+        "idUser":0,
+        "name":"Tomny Tèo",
+        "sđt":"0900908889",
+        "email":"nghia@123",
+        "diachi":[
+            {"quocGia":"Việt Nam",
+            "thanhpho":"Hồ Chí Minh",
+            "quan":"Quận 12",
+            "phuong":"Tân Chánh Hiệp",
+            "nha":"08 TMT 2A"}
+
+        ],
+        "passwork":"nghia1234",
+        "avt":"img/anh6.webp",
+        "rote":0,
+        "sale":[
+            "10",
+            "20",
+            "30",
+            "50",
+            "70"
+        ]
+        
+    }
+    
+]

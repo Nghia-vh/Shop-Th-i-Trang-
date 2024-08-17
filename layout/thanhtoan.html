@@ -1,0 +1,161 @@
+
+<style>
+    
+    .logo{
+      width: 70px;
+      height: 70px;
+    }
+    fom h3{
+      color: brown;
+    }
+    fom h5{
+      color: yellowgreen;
+    }
+    fom span{
+      color: rgb(133, 96, 50);
+    }
+    .invavi{
+      color: red;
+    }
+</style>
+<body>
+   
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-7">
+                <form  class="fom-select-lg  bg-info-subtle mb-5 " name="fom" >
+                        <h1 class="mb-2"><img class="logo"  src="img/Frame_39_2x-removebg-preview.png" alt=""></h1>
+                          <h3 class="mb-4">Thông Tin Liên Lạc</h3>
+                          <div>
+                            <span>Họ và tên</span><br><br>
+                            <input type="text" class="fom-control mb-3 input-group" ng-model="ten" name="ten" required>
+                            <span ng-show="fom.ten.$invalid && fom.ten.$dirty " >Vui lòng nhập Họ Tên</span><br><br>
+  
+                          </div>
+                          <div>
+                            <span> Số điện thoại           </span><br><br>
+                            <input type="number" class="fom-control mb-3 input-group mb-3 input-group-lg" ng-model="phone" name="phone" required>
+                            <span ng-show="fom.phone.$invalid && fom.phone.$dirty " class="invali">Vui lòng nhập SĐT</span><br>
+  
+                          </div>
+
+                          <h3 class="mb-4">Địa Chỉ Giao Hàng</h3>
+                          <div>
+                            <span>Tỉnh\Thành phố</span><br><br>
+                            <select class="fom-control mb-3 input-group" ng-model="tinh" name="tinh"  ng-options="tinh.Name for tinh in dsTinh" required> 
+ 
+                             </select>
+                             <span ng-show="fom.tinh.$invalid && fom.tinh.$dirty" class="invali">Vui lòng chọn tỉnh</span><br>
+
+ 
+                          </div>
+                            <div ng-show="tinh"   >
+                              <span >Quận\Huyện</span><br><br>
+                              <select class="fom-control mb-3 input-group" ng-model="huyen" name="huyen" ng-options="huyen.Name for huyen in tinh.Districts" required>
+                              </select>
+                              <span ng-show="fom.huyen.$invalid && fom.huyen.$dirty" class="invali">Vui lòng chọn </span><br>
+
+                            </div>
+                            
+                          
+                           <div ng-show="huyen">
+                            <span > Phường\Xã</span><br><br>
+                            <select  class="fom-control mb-3 input-group"  ng-model="phuong" name="phuong" ng-options="phuong.Name for phuong in huyen.Wards" required>
+
+                            </select>
+                            <span ng-show="fom.phuong.$invalid && fom.phuong.$dirty" class="invali">Vui lòng chọn</span><br>
+
+                           </div>
+
+                            <div  ng-show="phuong">
+                              <span>Căn Hộ/Dãy Phòng</span><br><br>
+                              <input  type="text" class="fom-control mb-3 input-group mb-3 input-group-lg" placeholder="Căn Hộ / Dãy Phòng" ng-model="soNha" name="soNha" required>
+                              <span ng-show="fom.soNha.$invalid && fom.soNha.$dirty" class="invali">Vui lòng nhập số nhà</span><br>
+
+                            </div>
+                          <div>
+                            <br><span> Email</span><br><br>
+                            <input type="email"    class="fom-control mb-3 input-group mb-3 input-group-lg" ng-model="mail" name="mail" required><br>
+                            <span ng-show="fom.mail.$invalid && fom.mail.$dirty" class="invali">Email chưa đúng định dạng</span><br>
+       
+                          </div>
+
+                     <div class="mb-3">
+                      <h5>Lưu thông tin sau này</h5>
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" id="save" value="save" ng-model="saveOption">
+                          <label class="form-check-label" for="save">Lưu</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" id="notSave" value="notSave" ng-model="saveOption">
+                          <label class="form-check-label" for="notSave">Không lưu</label>
+                      </div>
+                  </div>
+                 <h3 class="mb-4">Vận chuyển và Giao hàng</h3>
+                 <h5 class="mb-4">Phương thức thanh toán </h5>
+
+                      <input type="checkbox" ng-model="tiemMat" name="tiemMat" required><span>Thanh toán khi nhận hàng</span><br>
+                      <span ng-show="fom.tiemMat.$invalid && fom.tiemMat.$dirty | sumitted" class="invali">Vui lòng chọn thanh toán</span><br>
+
+                  <i class="fa-brands fa-cc-visa" style="font-size: 30px;"></i>
+                  <i class="fa-solid fa-credit-card" style="font-size: 30px;"></i>
+
+                  <div class="col-6"><a href="" class="btn btn-info btn-lg m-5  " ng-click="hoantat(fom.$valid)">Hoàn tất thanh toán</a></div>
+
+                </form>
+             
+        
+            </div>
+            <div class="col-5" >
+                <div class="card-body row mb-5" ng-repeat="sp in cart">
+                    <div class="col-4"><img class="img-thumbnail" src="{{sp.img}}" alt=""></div>
+                    <div class="col-8">
+                       <h3>{{sp.name}}
+                        <span class="position-absolute top-60  translate-middle badge rounded-pill bg-primary fa-fade">
+                            {{sp.quantity}}
+                            <span class="visually-hidden">unread messages</span><br>
+                          </span><br>
+                       </h3>
+                
+                        <div class="row">
+                           <div class="col-6 text-end">{{sp.price | currency:"":0}}VNĐ</div>
+                        </div>
+       
+       
+                    </div>
+
+                    
+
+               </div>
+
+               <hr class="mb-5">
+
+               <div class="btn-group w-100 mb-5">
+                <select class="form-control mb-3 input-group" ng-model="selectedSale" ng-options="sale as sale + '%' for sale in dsUser.sale" required>
+                    <option value="" disabled selected hidden>Chọn giảm giá</option>
+                </select>
+                <a href="" class="btn btn-info" ng-click="applyDiscount()">Áp dụng</a>
+            </div>
+
+               <hr class="mb-5">
+
+               <div class="row">               
+                <p class="float-start col-6">Tổng thu:</p> <p class="text-end col-6">{{tongTien() | currency:"":0}}VNĐ</p>
+               </div>
+               <div class="row">
+                <p class="float-start col-6 "><i class="fa-solid fa-car-side"></i>Đang vận chuyển:</p> <p class="text-end col-6 ">Miễn phí</p>
+
+               </div>
+               <hr class="mb-5">
+               <div class="row">               
+                <strong class="float-start col-6">Tổng cộng:</strong> <strong class="text-end col-6">{{tongTien() | currency:"":0}}VNĐ</strong>
+               </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6"><a href="#!cart"><i class="fa-solid fa-arrow-left"></i>Trở lại</a>
+            </div>
+          </div>
+    </div>
+    <div style="height: 100px;"></div>
+</body>

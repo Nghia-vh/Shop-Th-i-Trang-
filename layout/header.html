@@ -1,0 +1,186 @@
+
+<style>
+  .shopping-mall{
+      position: relative;
+      bottom: 20px;
+      font-variant: small-caps;
+      
+      
+    }
+    .shopping-mall h1{
+      font-family: Impact;
+      font-size: 50px;
+      color: white;
+      letter-spacing: 0.2px;
+      text-shadow: 0 0 2px black;
+      padding-bottom: 0px;
+      border-bottom: 5px dotted rgb(217, 16, 16);
+      padding-bottom: 0px;
+      margin: 0px;
+    }
+    .shopping-mall-footer h1{
+      font-family: Impact;
+      font-size: 50px;
+      color: white;
+      letter-spacing: 0.2px;
+      text-shadow: 0 0 2px black;
+      padding-bottom: 0px;
+      border-bottom: 1px dotted rgb(220, 132, 132);
+      padding-bottom: 0px;
+      margin: 0px;
+    }
+    .shopping-mall h5{
+      margin-top: 5px;
+      letter-spacing: 0.5px;
+      font-size: 20px;
+    }
+    .shopping-mall-footer h5{
+      margin-top: 5px;
+      letter-spacing: 0.5px;
+      font-size: 20px;
+    }
+    .logo{
+      width: 70px;
+      height: 70px;
+      
+    }
+    .mot a:hover{
+      color: rgb(109, 109, 46);
+      transform: scale(1.1);
+      font-weight: bold;
+      
+
+    }
+    
+    .dropdown-toggle::after{
+      display: none;
+    }
+    .cot2 {font-size: 30px;}
+    .card-shop a{
+      font-size: 30px;
+      width: 50px;
+      height: 50px;
+    }
+    .imgUser{
+      width: 50px;
+      height: 50px;
+    }
+    
+    .danhmuc a{
+     color: #683d0a;
+     font-weight: bold;
+    }
+
+</style>
+<header >
+
+   <nav class="navbar navbar-expand-lg  fixed-top" style="background-color: rgb(133, 176, 219);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+         <div class=" shopping-mall text-center align-middle ">
+        <h1><img class="logo"  src="img/Frame_39_2x-removebg-preview.png" alt="">
+        </h1>
+        <h5>Thời Trang Và Cuộc Sống  </h5>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mot " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link tt" aria-current="page" href="#!"><i class="fa-solid fa-house"></i>Trang Chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#"><i class="fa-solid fa-diagram-lean-canvas"></i>Giới Thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-phone"></i>Liên Hệ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-envelope"></i>Góp Ý</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-sharp fa-solid fa-question"></i>Hỏi Đáp</a>
+          </li>
+          
+          
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 " style="margin-bottom: 70px;">
+          <li class="nav-item dropstart ">
+            <a class="nav-link dropdown-toggle cot2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i ng-if="taiKhoan.length==0" class="fa-solid fa-user" ></i>
+              
+                <img ng-if="taiKhoan.length > 0" class=" imgUser rounded-circle" src="{{taiKhoan[0].avt}}" alt="">
+
+             
+            </a>        
+            <ul class="dropdown-menu ">
+              <div class="d-flex justify-content-center">               <img ng-if="taiKhoan.length > 0" class=" imgUser rounded-circle " src="{{taiKhoan[0].avt}}" alt="" style="max-width: 30;"> </div>
+
+              <hr ng-if="taiKhoan.length > 0">
+              <li ng-if="taiKhoan.length>0"><a class="dropdown-item" href="#" >Thông Tin Tài Khoản</a></li>
+              <li ng-if="taiKhoan.length>0"><a class="dropdown-item" href="#" >Quên Mật Khẩu</a></li>
+              <li ng-if="taiKhoan.length>0"><a class="dropdown-item btn" ng-click="dangxuat()" >Đăng Xuất </a></li>
+
+              
+              <li ng-if="taiKhoan.length==0"><a class="dropdown-item" href="#!login" >Đăng Nhập </a></li>
+              <li ng-if="taiKhoan.length==0"><a class="dropdown-item" href="#!dangky" >Đăng ký thành viên</a></li>
+
+
+
+            </ul>
+          </li>
+            <li class="nav-item card-shop">
+              <a class="nav-link  position-relative gh" aria-current="page" href="#!cart">
+                <i class="fa-solid fa-cart-shopping">
+                  
+                </i>
+                <span class="position-absolute top-10 start-120 translate-middle rounded-pill badge   bg-danger fs-6">
+                  {{cart.length}}
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+                
+              </a>
+            </li>
+            
+           
+            
+          </ul>
+      </div>
+    </div>
+  </nav> 
+
+   <div style="height: 140px;"></div>
+
+  
+   <nav class="navbar navbar-expand-lg " style="background-color: rgb(12, 112, 156);">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent2">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0 danhmuc ">
+          <li class="nav-item">
+            <a class="nav-link san " aria-current="page" href="#!sanpham">GUIT/VEST HÀNG CÓ SẴN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link thue" href="#!sanphamThue">GUIT/VEST HÀNG CHO THUÊ</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link vip" href="#!sanphamVip">GUIT/VEST HÀNG CAO CẤP</a>
+          </li>
+        </ul>
+        <form class="d-flex float-start" role="search">
+          <input class="form-control me-1" type="search" placeholder="Thông Tin Cần Mua" aria-label="Search" ng-model="tim" >
+          <button class="btn btn-danger" type="submit" ng-click="tim(tim)">Tìm </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+    </header>
+
+   
+    

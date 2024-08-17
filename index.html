@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ps36086-ASM2</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+</head>
+
+  
+<body ng-app="myApp">
+    <div class="container-xxl" ng-controller="myCtrl">
+       <header ng-include="'layout/header.html'"></header>
+      
+
+    <div ng-view></div>
+
+
+<footer ng-include="'layout/footer.html'"></footer>
+    </div>
+    <div ng-show="isLoading" class="position-fixed top-0 bottom-0 start-0 end-0 z-3 text-bg-dark d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-spin fa-spinner me-2"></i>
+        Đang tải ....
+      </div>
+</body>
+
+
+
+</html>
+<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/4b1791cf7d.js" crossorigin="anonymous"></script>
+<script src="angular.min.js"></script>
+<script src="angular-route.js"></script>
+<script src="app.js"></script>
+
+
+
+
+ 
+
+
+

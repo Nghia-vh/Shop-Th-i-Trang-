@@ -1,0 +1,175 @@
+
+<style>
+     
+    
+    
+    .logo{
+      width: 70px;
+      height: 70px;
+      
+    }
+    
+   
+    
+    .dropdown-toggle::after{
+      display: none;
+    }
+    .cot2 {font-size: 30px;}
+    .card-shop a{
+      font-size: 30px;
+      width: 50px;
+      height: 50px;
+    }
+
+    
+    .danhmuc a{
+     color: #683d0a;
+     font-weight: bold;
+    }
+   
+.col-9{
+    overflow: hidden; 
+    display: inline-block;
+}
+.img-ch{
+    transition: transform 0.3s ease; 
+}
+.img-ch:hover{
+    transform: scale(1.2);
+}
+.mr{
+    margin-right: 10px;
+    color: #dc1111;
+}
+.mr1{
+    margin-right: 10px;
+}
+.col-6 h2{
+    
+  text-align: center;
+  color: #2c2c2c;
+  letter-spacing: .05em;
+  text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+
+}
+.body h1{
+    text-align: center;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  height: 100px;
+  padding-top: 40px;
+  color: #e0dfdc;
+  background-color: #333;
+  letter-spacing: .1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+
+}
+.body {
+      backdrop-filter: blur(5px);
+      background-image: url('img/ct-bg2.jpg'); /* Đường dẫn đến hình ảnh làm nền */
+      background-size: cover; /* Kéo hình ảnh để nó phủ toàn bộ diện tích của phần tử */
+      background-position: center; /* Căn chỉnh hình ảnh vào giữa */
+    }
+
+.img-thumbnail2{
+  width: 350px;
+  height: 400px;
+}
+</style>
+<body>
+  
+     <div class="container-xxl body">
+        <h1 class="text-center mb-4">CHI TIẾT SẢN PHẨM</h1>
+       <div class="row">
+        <div class="row col-6 ">
+          <div class="row">
+            <div class="col-3">
+                <img ng-repeat="ct in sp.imgCt |  limitTo:limit:begin" class="img-fluid mb-2" src="{{ct.img}}" alt="" ng-click="showimg(ct.img)">
+                
+            </div> 
+            <div class="col-9">
+              <img class="img-fluid mb-2 img-ch" src="{{sp.img}}" alt="" ng-if="!anh"  >
+
+                <img class="img-fluid mb-2 img-ch"    ng-src="{{anh}}" alt="" ng-if="anh" >
+            </div>
+            <nav aria-label="Page navigation example" class="mt-5">
+              <ul class="pagination " >
+                <li class="page-item"><button ng-click="chuyenTrang(page-1)" class="page-link {{(page==1)?'disabled':''}}" ><</button></li>
+                
+                <li class="page-item"><button ng-click="chuyenTrang(page+1)" class="page-link {{(page==totalPage())?'disabled':''}}">></button></li>
+              </ul>
+            </nav>
+        </div>
+        
+        </div>
+        <div class="col-6">
+            <h2>{{sp.name}}</h2> 
+            <span ng-if="sp.ic == 'new'">
+              <p class="btn btn-danger rounded-5 position-relative top-0  fa-solid fa-shake">NEW</p>
+            </span>
+            <span ng-if="sp.ic == 'sale' ">
+              <p class="btn btn-warning rounded-5  position-relative top-0  fa-solid fa-bounce">SALE</p>
+            </span>
+            <span ng-if="sp.ic == 'limitted' ">
+              <p class="btn btn-warning rounded-5  position-relative top-0  fa-solid fa-bounce"><i class="fa-solid fa-star"></i></p>
+            </span>  
+            <h5>Giá Bán : {{sp.price | currency:"":0}}VNĐ</h5>
+            <h5><span class="mr1"> SIZE :</span><span class="mr" ng-repeat="size in sp.Size">{{size.size}}</span></h5>
+            <h5>Hổ Trợ Chỉnh Sửa</h5>
+            <p>Áo vest nam may sẵn tôn dáng đủ size từ 40KG đến 120KG sang trọng, lịch sự chỉ từ 1.200.000 Chất liệu vải nhập khẩu cao cấp không bai xù, nhăn co, màu sắc đa dạng, sắc nét.</p>
+            <p>Áo vest có thể mặc trong các buổi tiệc, đi làm công sở, đi chơi…</p>
+            <p ng-if="sp.danhmuc=='Sẵn'">Danh mục: <span><a href="#!sanpham" style="text-decoration: none;">VEST có bán sẳn</a></span></p>
+            <p ng-if="sp.danhmuc=='Vip'">Danh mục: <span><a href="#!sanphamThue" style="text-decoration: none;">VEST VIP</a></span></p>
+            <p ng-if="sp.danhmuc=='Thuê'">Danh mục: <span><a href="#!sanphamVip" style="text-decoration: none;">VEST cho thuê</a></span></p>
+
+            <a  class="btn btn-info " ng-click="mua(sp)"  >THÊM GIỎ HÀNG</a>
+            <a href="#" class="btn btn-info " ng-if="sp.danhmuc=='Thuê'">THUÊ</a>
+
+        </div>
+
+
+
+       <div class="row">
+        <P class="text-center mt-5" style="font-size: 30px;background-color: #4a0202; color: white;">Sản Phẩm Liên Quan</P>
+          <div class="card col-xl-4  bg-custom-sp" style="margin-bottom: 30px;" ng-repeat="splq in spLienquan | limitTo:limit:begin">
+            <div class="card-header text-center">
+              <h6>{{splq.name}}</h6>
+            </div>
+            <div class="card-body"><img class="img-thumbnail img-thumbnail2" src="{{splq.img}}" alt="">
+            </div>
+            <div class="card-footer text-center">
+              <span ng-if="sp.tonKho > 1"><p class="badge  text-bg-info">Còn Hàng</p>
+              </span>
+              <span ng-if="sp.tonKho < 1"><p class="badge  text-bg-info">Hết Hàng</p>
+              </span>
+              <span ng-if="sp.ic == 'new'">
+                <p class="btn btn-danger rounded-5 position-relative top-0  fa-solid fa-shake">NEW</p>
+              </span>
+              <span ng-if="sp.ic == 'sale' ">
+                <p class="btn btn-warning rounded-5  position-relative top-0  fa-solid fa-bounce">SALE</p>
+              </span>
+              <span ng-if="sp.ic == 'limitted' ">
+                <p class="btn btn-warning rounded-5  position-relative top-0  fa-solid fa-bounce"><i class="fa-solid fa-star"></i></p>
+              </span>      
+              <p><span>{{splq.price | currency:"":0}}VNĐ</span></p>
+            </div>
+    
+            <div class="btn-group ">
+              <a ng-click="mua(splq)" type="button" class="btn btn-danger me-2 rounded-2" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+                Mua Ngay
+              </a>
+              <a  href="#!chitietSP/{{splq.id}}"  class="btn btn-success me-2 rounded-2" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+                Xem Chi Tiết
+              </a>    
+            </div>
+            
+          </div>   
+
+          
+          
+
+
+       </div>
+       </div>
+    </div> 
+   
+</body>

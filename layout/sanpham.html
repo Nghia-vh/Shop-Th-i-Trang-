@@ -1,0 +1,240 @@
+
+<style>
+    
+
+
+    
+    .icon-link-hover{
+      font-size: 25px;
+    }
+    .table-footer tr{
+      width: 300px;
+
+    }
+
+    
+    
+    .bg-custom-sp {
+      backdrop-filter: blur(5px);
+      background-image: url('img/bg-sp.jpg'); /* Đường dẫn đến hình ảnh làm nền */
+      background-size: cover; /* Kéo hình ảnh để nó phủ toàn bộ diện tích của phần tử */
+      background-position: center; /* Căn chỉnh hình ảnh vào giữa */
+    }
+    .bg-nen {
+      backdrop-filter: blur(5px);
+      background-image: url('img/background-giay.jpg'); /* Đường dẫn đến hình ảnh làm nền */
+      background-size: cover; /* Kéo hình ảnh để nó phủ toàn bộ diện tích của phần tử */
+      background-position: center; /* Căn chỉnh hình ảnh vào giữa */
+    }
+
+    h6 {
+  text-align: center;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  
+  
+  color: #e0dfdc;
+  background-color: #333;
+  letter-spacing: .1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+}
+.img-thumbnail2{
+  width: 350px;
+  height: 400px;
+}
+.san{
+  background-color: rgb(88, 97, 177);
+}
+</style>
+<body ng-controller="sanphamCtrl">
+  
+   
+   <div class="container-xxl row bg-nen">
+     <h1 class="text-center active text-opacity-100" style="margin-bottom: 100px;"><strong >GUIT/VEST HÀNG CÓ SẴN</strong> </h1>
+
+     <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-primary me-1" ng-click="order='price'">Tăng Dần</button>
+      <button type="button" class="btn btn-primary me-1" ng-click="order='-price'">Giảm Dần</button>
+      <button type="button" class="btn btn-primary me-1" ng-click="order='name'">A-Z</button>
+      <button type="button" class="btn btn-primary" ng-click="order='-name'">Z-A</button>
+  </div>
+
+  
+    <div class="col-3 ">
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Nhập Để Tìm Kiếm..." aria-label="Recipient's username" aria-describedby="basic-addon1" ng-model="keywork" ng-model-options="{debounce:2000}">
+        <!-- <button class="input-group-text" id="basic-addon1" ><i class="fa-solid fa-magnifying-glass"></i></button> -->
+      </div>
+      <div class="accordion " id="accordionExample" >
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+              <i class="fa-solid fa-earth-americas"></i></i>Nhập Khẩu
+            </button>
+          </h2>
+          <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              <div class="card" style="margin-bottom: 5px;">
+                <div class="card-body ">
+               <a  class="btn text-uppercase text-decoration-none text-black" ng-click="keywork='JAPAN'">JAPAN</a>
+                </div>
+              </div>
+
+
+             <div class="card" style="margin-bottom: 5px;">
+              <div class="card-body ">
+             <a  class="btn text-uppercase text-decoration-none text-black" ng-click="keywork='ENGLAND'">ENGLAND</a>
+              </div>
+             </div>
+
+             
+             <div class="card" style="margin-bottom: 5px;">
+              <div class="card-body ">
+             <a  class="btn text-uppercase text-decoration-none text-black" ng-click="keywork='ITALY'">ITALY</a>
+              </div>
+             </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="accordion " id="accordionExample" >
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading2">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+              <i class="fa-solid fa-street-view"></i>Trong Nước
+            </button>
+          </h2>
+          <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              <div class="card" style="margin-bottom: 5px;">
+                <div class="card-body ">
+               <a  class=" btn text-uppercase text-decoration-none text-black"  ng-click="keywork='UMVESTNAM'">UMVESTNAM</a>
+                </div>
+              </div>
+
+
+             <div class="card" style="margin-bottom: 5px;">
+              <div class="card-body ">
+             <a  class=" btn text-uppercase text-decoration-none text-black"  ng-click="keywork='AOVESTNAM'">AOVESTNAM</a>
+              </div>
+             </div>
+
+             
+             <div class="card" style="margin-bottom: 5px;">
+              <div class="card-body ">
+             <a  class=" btn text-uppercase text-decoration-none text-black"  ng-click="keywork='Thomas'">Thomas Nguyen</a>
+              </div>
+             </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion " id="accordionExample" >
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                <i class="far fa-star"></i> Hàng Được Quan Tâm
+              </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse show" aria-labelledby="heading3" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+
+
+                <div class="card" style="margin-bottom: 5px;">
+                  <div class="card-body ">
+                    <a  class=" btn text-uppercase text-decoration-none text-black"  ng-click="getTop5ByBan()">Hàng Bán Chạy</a>
+                  </div>
+                 </div>
+
+                 <div class="card" style="margin-bottom: 5px;">
+                  <div class="card-body ">
+                    <a  class=" btn text-uppercase text-decoration-none text-black"  ng-click="keywork='sale'">Hàng Giảm Giá</a>
+                  </div>
+                 </div>
+
+                 <div class="card" style="margin-bottom: 5px;">
+                  <div class="card-body ">
+                    <a  class=" btn text-uppercase text-decoration-none text-black"  ng-click="keywork='new'">Hàng Mới</a>
+                  </div>
+                 </div>
+
+                 <div class="card" style="margin-bottom: 5px;">
+                  <div class="card-body ">
+                    <a  class=" btn text-uppercase text-decoration-none text-black"  ng-click="keywork='limitted'">Hàng Đặc Biệt</a>
+                  </div>
+                 </div>
+
+                 <div class="card" style="margin-bottom: 5px;">
+                  <div class="card-body ">
+                    <a  class=" btn text-uppercase text-decoration-none text-black"  ng-click="getTop5ByViews()">Hàng Xem Nhiều</a>
+                  </div>
+                 </div>
+
+              </div>
+            </div>
+            </div>
+          </div>
+    </div>
+    <div class="row col-9"  >
+      <div class="card col-xl-6  bg-custom-sp" ng-repeat="sp in dsSP | search:keywork:['name','price','xuatxu','ic'] | orderBy:order | limitTo:limit:begin " style="max-height: 710px;">
+        <div class="card-header text-center">
+          <h6>{{sp.name}}</h6>
+        </div>
+        <div class="card-body"><img class="img-thumbnail2" src="{{sp.img}}" alt="">
+        </div>
+        <div class="card-footer text-center">
+          <span ng-if="sp.tonKho > 1"><p class="badge  text-bg-info">Còn Hàng</p>
+          </span>
+          <span ng-if="sp.tonKho < 1"><p class="badge  text-bg-info">Hết Hàng</p>
+          </span>
+          <span ng-if="sp.ic == 'new'">
+            <p class="btn btn-danger rounded-5 position-relative top-0  fa-solid fa-shake">NEW</p>
+          </span>
+          <span ng-if="sp.ic == 'sale' ">
+            <p class="btn btn-warning rounded-5  position-relative top-0  fa-solid fa-bounce">SALE</p>
+          </span>
+          <span ng-if="sp.ic == 'limitted' ">
+            <p class="btn btn-warning rounded-5  position-relative top-0  fa-solid fa-bounce"><i class="fa-solid fa-star"></i></p>
+          </span>
+
+          <p>{{sp.price | currency:"":0}}VNĐ</p>
+        </div>
+
+        <div class="btn-group ">
+          <a ng-click="mua(sp)" type="button" class="btn btn-danger me-2 rounded-2" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+            Mua Ngay
+          </a>
+          <a href="#!chitietSP/{{sp.id}}"   class="btn btn-success me-2 rounded-2" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+            Xem Chi Tiết
+          </a>    
+        </div>
+        
+      </div>
+
+      
+      
+    </div>
+    <nav aria-label="Page navigation example" class="mt-5">
+      <ul class="pagination justify-content-center" >
+        <li class="page-item"><button ng-click="chuyenTrang(page-1)" class="page-link {{(page==1)?'disabled':''}}" >Previous</button></li>
+        <li ng-repeat="trang in pageList()" class="page-item"><button ng-click="chuyenTrang(trang)" class="page-link {{(page==trang)?'active':''}}" >{{trang}}</button></li>
+        
+        <li class="page-item"><button ng-click="chuyenTrang(page+1)" class="page-link {{(page==totalPage())?'disabled':''}}">Next</button></li>
+      </ul>
+    </nav>
+
+   
+   </div>
+
+   
+
+</body>
+
+

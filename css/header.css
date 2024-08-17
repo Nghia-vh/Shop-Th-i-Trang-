@@ -1,0 +1,66 @@
+ .shopping-mall{
+    position: relative;
+    bottom: 20px;
+    font-variant: small-caps;
+    
+    
+  }
+  .shopping-mall h1{
+    font-family: Impact;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 0.2px;
+    text-shadow: 0 0 2px black;
+    padding-bottom: 0px;
+    border-bottom: 5px dotted rgb(217, 16, 16);
+    padding-bottom: 0px;
+    margin: 0px;
+  }
+  .shopping-mall-footer h1{
+    font-family: Impact;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 0.2px;
+    text-shadow: 0 0 2px black;
+    padding-bottom: 0px;
+    border-bottom: 1px dotted rgb(220, 132, 132);
+    padding-bottom: 0px;
+    margin: 0px;
+  }
+  .shopping-mall h5{
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+  }
+  .shopping-mall-footer h5{
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+  }
+  .logo{
+    width: 70px;
+    height: 70px;
+    
+  }
+  .logo-footer{
+    width: 70px;
+    height: 70px;
+    
+  }
+  .mot a:hover{
+    color: rgb(109, 109, 46);
+    transform: scale(1.1);
+    font-weight: bold;
+    
+
+  }
+  
+  .dropdown-toggle::after{
+    display: none;
+  }
+  .cot2 {font-size: 30px;}
+  .card-shop a{
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+  }

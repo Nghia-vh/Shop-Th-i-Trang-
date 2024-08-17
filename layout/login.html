@@ -1,0 +1,104 @@
+  
+     
+
+<style>
+  /* Custom CSS */
+  body.logins {
+      background-color: #f8f9fa; /* Màu nền cho trang */
+      font-family: Arial, sans-serif;
+      height: 100vh; /* Đảm bảo trang độ cao bằng 100% chiều cao của viewport */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  
+
+  .cardL {
+      width: 400px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .cardL-header {
+      background-color: #007bff; /* Màu nền cho phần header của thẻ card */
+      color: white;
+      font-size: 20px;
+      padding: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+  }
+
+  .cardL-body {
+      padding: 20px;
+  }
+
+  .form-labelL {
+      font-weight: bold;
+  }
+
+  /* Định dạng nút Quay lại trang chủ */
+  .btn-back {
+      margin-top: 20px;
+      display: inline-block;
+  }
+
+  /* Định dạng nút Đăng ký */
+  .btn-register {
+      margin-top: 20px;
+      display: inline-block;
+  }
+
+  /* Định dạng icon */
+  .fa-flip {
+      transform: scaleX(-1);
+      margin-right: 5px;
+  }
+</style>
+  <body class="logins " >
+    
+ 
+      <header >
+       
+         <div ><h2 class="text-center">Trang Đăng Nhập</h2></div>
+        </div>
+       
+      </header>
+      <div class=" d-flex justify-content-center">
+
+
+     
+      <div class="row ">
+       
+          <div class="card mt-5 cardL">
+            <div class="card-header text-center" style="font-size: 30px;">
+              Đăng Nhập
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="mb-4">
+                  <label for="username" class="form-label">Tài Khoản</label>
+                  <input type="text" class="form-control" id="username" placeholder="Nhập email hoặc số điện thoại " ng-model="user">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Mật Khẩu</label>
+                  <input type="password" class="form-control" id="password" placeholder="Mật khẩu" ng-model="pass">
+                </div>
+                <button type="submit" class="btn btn-primary" ng-click="login(user,pass)">Đăng Nhập</button><br><span>{{tt}}</span>
+                <span>Bạn chưa có tài khoản <i class="fa-solid fa-question fa-flip"></i></span><a href="#!dangky" class="btn btn-warning" >Đăng Ký Ngay</a>
+              </form>
+            </div>
+          </div>
+        </div>
+     
+  </div>
+  <a href="#!" class="btn btn-warning"><i class="fa-solid fa-backward " ></i> Quay lại trang chủ</a>
+
+</body> 
+
+
+
+
+
+

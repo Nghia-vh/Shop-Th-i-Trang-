@@ -1,0 +1,82 @@
+  
+     
+
+<style>
+   .login h2{
+    font-size: 15px;
+     
+   }
+   .login {
+      backdrop-filter: blur(5px);
+      background-image: url('img/nentoi.png'); /* Đường dẫn đến hình ảnh làm nền */
+      background-size: cover; /* Kéo hình ảnh để nó phủ toàn bộ diện tích của phần tử */
+      background-position: center; /* Căn chỉnh hình ảnh vào giữa */
+      height: 100vh; /* Chiều cao tối thiểu là 100% chiều cao của viewport */
+    }
+</style>
+  <body>
+    
+  
+    <header >
+       
+      <div ><h2 class="text-center">Trang Đăng Ký</h2></div>
+     </div>
+    
+   </header>
+        <div >
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="card mt-5">
+                  <div class="card-header">
+                    Đăng ký tài khoản mới
+                  </div>
+                  <div class="card-body">
+                    <form name="form">
+                        <div class="mb-3">
+                            <label for="">Họ và tên</label>
+                            <input type="text" class="form-control" name="fullname" ng-model="fullname" required>
+                            <span ng-show="form.fullname.$invalid && form.fullname.$dirty">Vui lòng nhập Họ Tên</span>
+                        </div>
+                        <div class="mb-3">
+                          <label for="phoneMunber" class="form-label">Số điện thoại</label>
+                          <input type="number" class="form-control" name="phoneMunber" ng-model="phoneMunber" required>
+                          <span ng-show="form.phoneMunber.$invalid && form.phoneMunber.$dirty">Vui lòng nhập phoneMunber</span>
+                      </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" ng-model="email" required>
+                            <span ng-show="form.email.$invalid && form.email.$dirty">Vui lòng nhập Email</span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" ng-model="password" pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$" required>
+                            <span ng-show="form.password.$invalid && form.password.$dirty">Mật khẩu từ 8 - 16 ký tự gồm chữ in hoa, số và ký tự đặc biệt</span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Nhập Password</label>
+                            <input type="password" class="form-control" name="confirmPassword" ng-model="confirmPassword" required>
+                            <span ng-if="password !== confirmPassword">Mật khẩu không trùng khớp</span>
+                        </div>
+                        <div class="mb-3">
+                            <input type="checkbox" class="form-check-input mr-3" name="radio" ng-model="radio" required>
+                            <span>Chấp nhận điều khoản</span>
+                            <br>
+                            <span ng-show="form.radio.$invalid && form.radio.$dirty">Vui lòng chấp nhận điều khoản</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary" ng-click="dangky(fullname,phone,email,confirmPassword,form.$valid)">Đăng Ký</button>
+                    </form>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    <a href="#!login" class="btn btn-warning"><i class="fa-solid fa-backward" ></i> Quay lại trang đăng nhập</a>
+</body> 
+
+
+
+
+
+

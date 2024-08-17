@@ -1,0 +1,746 @@
+[
+    { 
+        "id":0,
+        "name":"ÁO VEST NAM  VẢI NAM CAO CẤP",
+        "price":100000000,
+        "tonKho":500,
+        "img":"img/anh1.jfif",
+        "ic":"new",
+        "xuatxu":"UMVESTNAM",
+        "view":100,
+        "ban":100,
+        "denger":"nam",
+        "imgCt":[
+            {
+              "img": "img/anh1.jfif" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+
+        ],
+        "danhmuc":"Thuê",
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+    },
+    { 
+        "id":1,
+        "name":"ÁO VEST NAM  VẢI NAM CAO CẤP",
+        "price":110000000,
+        "tonKho":0,
+        "img":"img/anh2.jpg",
+        "ic":"sale",
+        "xuatxu":"ENGLAND",
+        "view":200,
+        "ban":200,
+        "denger":"nam",
+         "imgCt":[
+            {
+              "img": "img/anh2.jpg" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+        ],
+        "danhmuc":"Thuê",
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+    },
+    { 
+        "id":2,
+        "name":"ÁO VEST NAM  VẢI NAM CAO CẤP",
+        "price":120000000,
+        "tonKho":500,
+        "img":"img/anh3.jpg",
+        "ic":"",
+        "xuatxu":"ENGLAND",
+        "view":300,
+        "ban":300,
+        "denger":"nam",
+         "imgCt":[
+            {
+              "img": "img/anh3.jpg" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+        ],
+        "danhmuc":"Thuê",
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+    },
+    { 
+        "id":3,
+        "name":"ÁO VEST NAM  VẢI NAM CAO CẤP",
+        "price":130000000,
+        "tonKho":500,
+        "img":"img/anh4.webp",
+        "ic":"new",
+        "xuatxu":"UMVESTNAM",
+        "view":100,
+        "ban":400,
+        "denger":"nam",
+         "imgCt":[
+            {
+              "img": "img/anh4.webp" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+
+        ],
+        "danhmuc":"Thuê",
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+    },
+    { 
+        "id":4,
+        "name":"ÁO VEST NỮ  VẢI NAM CAO CẤP",
+        "price":140000000,
+        "tonKho":500,
+        "img":"img/anh5.jpg",
+        "ic":"sale",
+        "xuatxu":"AOVESTNAM",
+        "view":300,
+        "ban":500,
+        "denger":"nữ",
+         "imgCt":[
+            {
+              "img": "img/anh5.jpg" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+
+        ],
+        "danhmuc":"Thuê",
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ] 
+
+
+    },
+    { 
+        "id":5,
+        "name":"ÁO VEST NỮ  VẢI NAM CAO CẤP",
+        "price":150000000,
+        "tonKho":500,
+        "img":"img/anh6.webp",
+        "ic":"limitted",
+        "xuatxu":"ITALY",
+        "view":300,
+        "ban":600,
+        "denger":"nữ",
+         "imgCt":[
+            {
+              "img": "img/anh6.webp" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+
+        ],
+        "danhmuc":"Vip" ,
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+
+    },
+    { 
+        "id":6,
+        "name":"ÁO VEST NAM  VẢI NAM CAO CẤP",
+        "price":160000000,
+        "tonKho":500,
+        "img":"img/anh7.jpg",
+        "ic":"sale",
+        "xuatxu":"ITALY",
+        "view":300,
+        "ban":700,
+        "denger":"nam",
+         "imgCt":[
+            {
+              "img": "img/anh7.jpg" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+
+        ],
+        "danhmuc":"Vip" ,
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+
+    },
+    { 
+        "id":7,
+        "name":"ÁO VEST NAM  VẢI NAM CAO CẤP",
+        "price":170000000,
+        "tonKho":500,
+        "img":"img/anh8.webp",
+        "ic":"limitted",
+        "xuatxu":"AOVESTNAM",
+        "view":200,
+        "ban":800,
+        "denger":"nam",
+         "imgCt":[
+            {
+              "img": "img/anh8.webp" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+
+        ],
+        "danhmuc":"Vip" ,
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+
+    },
+    { 
+        "id":8,
+        "name":"ÁO VEST NAM  VẢI NAM CAO CẤP",
+        "price":180000000,
+        "tonKho":500,
+        "img":"img/anh9.jpg",
+        "ic":"sale",
+        "xuatxu":"JAPAN",
+        "view":200,
+        "ban":900,
+        "denger":"nam",
+         "imgCt":[
+            {
+              "img": "img/anh9.jpg" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+
+        ],
+        "danhmuc":"Vip" ,
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+
+    },
+    { 
+        "id":9,
+        "name":"ÁO VEST NAM  VẢI NAM CAO CẤP",
+        "price":190000000,
+        "tonKho":500,
+        "img":"img/anh10.jpg",
+        "ic":"sale",
+        "xuatxu":"Thomas",
+        "view":200,
+        "ban":910,
+        "denger":"nam",
+         "imgCt":[
+            {
+              "img": "img/anh10.jpg" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+
+        ],
+        "danhmuc":"Vip" ,
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+
+    },
+    { 
+        "id":111,
+        "name":"ÁO VEST NỮ  VẢI NAM CAO CẤP",
+        "price":1110000000,
+        "tonKho":500,
+        "img":"img/anh11.jpg",
+        "ic":"new",
+        "xuatxu":"JAPAN",
+        "view":200,
+        "ban":920,
+        "denger":"Nữ",
+         "imgCt":[
+            {
+              "img": "img/anh1.jfif" 
+            },
+            {
+                "img": "img/anh11.jpg" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+        ],
+        "danhmuc":"Sẵn" ,
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+    },
+    { 
+        "id":11,
+        "name":"ÁO VEST NỮ  VẢI NAM CAO CẤP",
+        "price":1120000000,
+        "tonKho":500,
+        "img":"img/anh12.jpg",
+        "ic":"new",
+        "xuatxu":"Thomas",
+        "view":200,
+        "ban":930,
+        "denger":"Nữ",
+         "imgCt":[
+            {
+              "img": "img/anh12.jpg" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+
+        ],
+        "danhmuc":"Sẵn" ,
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+
+    },
+    { 
+        "id":12,
+        "name":"ÁO VEST NỮ  VẢI NAM CAO CẤP",
+        "price":1130000000,
+        "tonKho":500,
+        "img":"img/anh13.jpg",
+        "ic":"sale",
+        "xuatxu":"JAPAN",
+        "view":200,
+        "ban":940,
+        "denger":"Nữ",
+         "imgCt":[
+            {
+              "img": "img/anh13.jpg" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+
+        ],
+        "danhmuc":"Sẵn" ,
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+
+    },
+    { 
+        "id":13,
+        "name":"ÁO VEST NỮ  VẢI NAM CAO CẤP",
+        "price":1140000000,
+        "tonKho":500,
+        "img":"img/anh14.png",
+        "ic":"new",
+        "xuatxu":"JAPAN",
+        "view":200,
+        "ban":950,
+        "denger":"Nữ",
+         "imgCt":[
+            {
+              "img": "img/anh14.png" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+
+        ],
+        "danhmuc":"Sẵn" ,
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+
+    },
+    { 
+        "id":14,
+        "name":"ÁO VEST NỮ  VẢI NAM CAO CẤP",
+        "price":1150000000,
+        "tonKho":500,
+        "img":"img/anh15.png",
+        "ic":"new",
+        "xuatxu":"JAPAN",
+        "view":200,
+        "ban":950,
+        "denger":"Nữ",
+         "imgCt":[
+            {
+              "img": "img/anh15.png" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+
+        ],
+        "danhmuc":"Sẵn" ,
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+
+    },
+    { 
+        "id":15,
+        "name":"ÁO VEST NAM  VẢI NAM CAO CẤP",
+        "price":110000000,
+        "tonKho":500,
+        "img":"img/anh16.webp",
+        "ic":"",
+        "xuatxu":"JAPAN",
+        "view":200,
+        "ban":950,
+        "denger":"nam",
+         "imgCt":[
+            {
+              "img": "img/anh6.webp" 
+            },
+            {
+                "img": "img/anh1.1.jfif" 
+              },
+            {
+                "img":"img/anh1.2.jfif"
+            },
+            {
+                "img":"img/anh1.3.jfif"
+            
+            },
+            {
+                "img":"img/anh1.4.jfif"
+            }
+        ],
+        "Size":
+        [
+            {"size" : "S"},
+            {"size" : "M"},
+            {"size" : "L"},
+            {"size" : "XL"},
+            {"size" : "XXL"}
+
+        ],
+        "danhmuc":"Sẵn" ,
+        "color":[
+            {"color":"Trắng"},
+            {"color":"Đen"},
+            {"color":"Xanh"}
+        ]
+
+
+    }
+]
